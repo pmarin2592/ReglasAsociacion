@@ -66,54 +66,6 @@ class FileReaderFactory:
 
 
 # ──────────────────────────────────────────────
-# Clase de selección de columnas
-# ──────────────────────────────────────────────
-
-class ColumnSelector:
-    def __init__(self, df: pd.DataFrame):
-        self.df = df
-        self.all_columns = list(df.columns)
-
-    def _on_col_change(self):
-        val = st.session_state["col_selectbox"]
-        if val != "— Elige una columna —" and val not in st.session_state["selected_cols"]:
-            st.session_state["selected_cols"].append(val)
-
-    def render(self) -> list[str]:
-        st.markdown("#### Seleccionar columnas para visualizar")
-
-        if "selected_cols" not in st.session_state:
-            st.session_state["selected_cols"] = []
-
-        col1, col2 = st.columns([4, 1])
-        with col1:
-            available = [c for c in self.all_columns if c not in st.session_state["selected_cols"]]
-            st.selectbox(
-                "Columnas disponibles",
-                options=["— Elige una columna —"] + available,
-                key="col_selectbox",
-                label_visibility="collapsed",
-                on_change=self._on_col_change,
-            )
-        with col2:
-            if st.button("🗑 Limpiar", use_container_width=True):
-                st.session_state["selected_cols"] = []
-                st.rerun()
-
-        if st.session_state["selected_cols"]:
-            tag_cols = st.columns(min(len(st.session_state["selected_cols"]), 4))
-            for i, col in enumerate(list(st.session_state["selected_cols"])):
-                with tag_cols[i % 4]:
-                    if st.button(f"✕ {col}", key=f"del_{col}", use_container_width=True):
-                        st.session_state["selected_cols"].remove(col)
-                        st.rerun()
-        else:
-            st.caption("Sin columnas seleccionadas.")
-
-        return st.session_state["selected_cols"]
-
-
-# ──────────────────────────────────────────────
 # Clase de visualización del DataFrame
 # ──────────────────────────────────────────────
 
@@ -297,16 +249,46 @@ class CargaDatos:
 
                 st.divider()
 
-                # Selector de columnas
-                selector = ColumnSelector(df)
-                selected_columns = selector.render()
+                # ── Parámetros del modelo ───────────────────────────────
+                st.markdown("#### ⚙️ Parámetros del Modelo — Apriori / Eclat")
 
-                if selected_columns:
-                    st.divider()
-                    viewer = DataFrameViewer(df)
-                    viewer.render(selected_columns)
+                pc1, pc2, pc3 = st.columns(3)
+
+                with pc1:
+                    soporte_min = st.slider(
+                        "Soporte mínimo",
+                        min_value=0.0, max_value=0.5,
+                        value=st.session_state.get("soporte_min", 0.05),
+                        step=0.01, format="%.2f",
+                        help="Fracción mínima de transacciones que deben contener el ítemset."
+                    )
+                    st.metric("🔵 Soporte seleccionado", f"{soporte_min:.2f}")
+                    st.session_state["soporte_min"] = soporte_min
+
+                with pc2:
+                    confianza_min = st.slider(
+                        "Confianza mínima",
+                        min_value=0.0, max_value=1.0,
+                        value=st.session_state.get("confianza_min", 0.5),
+                        step=0.01, format="%.2f",
+                        help="Probabilidad condicional mínima P(B|A)."
+                    )
+                    st.metric("🟢 Confianza seleccionada", f"{confianza_min:.2f}")
+                    st.session_state["confianza_min"] = confianza_min
+
+                with pc3:
+                    lift_min = st.slider(
+                        "Lift mínimo",
+                        min_value=1.0, max_value=10.0,
+                        value=st.session_state.get("lift_min", 1.5),
+                        step=0.1, format="%.1f",
+                        help="Lift > 1 indica asociación positiva entre ítems."
+                    )
+                    st.metric("🟡 Lift seleccionado", f"{lift_min:.1f}×")
+                    st.session_state["lift_min"] = lift_min
 
                 st.divider()
+
 
                 # Botón de análisis centrado
                 _, col_btn, _ = st.columns([3, 2, 3])
