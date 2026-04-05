@@ -8,6 +8,7 @@ import os
 import warnings
 import pandas as pd
 import numpy as np
+from pandas import DataFrame
 
 from src.utils import path as path_utils
 
@@ -36,40 +37,18 @@ class DataLoader:
         (por defecto 'ReglasAsociacion').
     """
 
-    def __init__(self, filepath: str, delimiter: str = ",",
-                 decimal: str = ".", encoding: str = "utf-8",
+    def __init__(self, df: pd.DataFrame,
                  project_root_name: str = "ReglasAsociacion"):
 
-        self.delimiter = delimiter
-        self.decimal = decimal
-        self.encoding = encoding
+        self.df = df
         self.project_root_name = project_root_name
-        self.df_raw: pd.DataFrame | None = None
-        self.df_clean: pd.DataFrame | None = None
-
-        # Resolver ruta absoluta mediante path_utils si la ruta es relativa
-        if os.path.isabs(filepath):
-            self.filepath = filepath
-        else:
-            root = path_utils.obtener_ruta_local(project_root_name) or os.getcwd()
-            self.filepath = os.path.join(root, filepath)
-
-        dir_csv = os.path.dirname(self.filepath)
-        if not path_utils.validar_ruta_app(dir_csv):
-            print(f"[DataLoader] Directorio no encontrado: {dir_csv}")
 
     # ------------------------------------------------------------------
     # Carga
     # ------------------------------------------------------------------
     def load(self) -> "DataLoader":
         """Lee el CSV y guarda el DataFrame crudo."""
-        self.df_raw = pd.read_csv(
-            self.filepath,
-            delimiter=self.delimiter,
-            decimal=self.decimal,
-            encoding=self.encoding,
-        )
-        print(f"[DataLoader] Archivo cargado: {self.filepath}")
+        self.df_raw = self.df.copy()
         print(f"             Dimensiones: {self.df_raw.shape[0]} filas x {self.df_raw.shape[1]} columnas")
         return self
 

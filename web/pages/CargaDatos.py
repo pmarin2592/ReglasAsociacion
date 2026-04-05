@@ -6,7 +6,7 @@ import hashlib
 import io
 from abc import ABC, abstractmethod
 from typing import Optional
-
+from src.processed.Pipeline import Pipeline
 # Carga Clases
 from src.utils.path import obtener_ruta_app
 
@@ -298,6 +298,8 @@ class CargaDatos:
                         for i in range(1, 101):
                             time.sleep(0.02)
                             progreso.progress(i, text=f"Analizando... {i}%")
+                        pp = Pipeline(df=df,min_support= st.session_state["soporte_min"],min_confidence=st.session_state["confianza_min"])
+                        pp.execute("laptops")
                         st.success("✅ Análisis completado.")
                         self.analisis_realizado            = True
                         st.session_state.analisis_generado = True

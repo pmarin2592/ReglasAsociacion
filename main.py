@@ -9,6 +9,7 @@ Ejecución
 ---------
     python main.py
 """
+import pandas as pd
 
 from src.processed.AssociationPipeline import AssociationPipeline
 
@@ -16,13 +17,13 @@ from src.processed.AssociationPipeline import AssociationPipeline
 # ======================================================================
 # CONFIGURACIÓN – LAPTOPS
 # ======================================================================
-def run_laptops():
+def run_laptops(df: pd.DataFrame):
     print("\n" + "#" * 70)
     print("#  DATASET: LAPTOPS")
     print("#" * 70)
 
     pipeline = AssociationPipeline(
-        csv_path="data/raw/dataset_laptos.csv",
+        df=df,
 
         # Opción A: columnas que ya contienen listas de ítems
         # transaction_columns=["Sales Package", "Caracteristicas"],
@@ -81,13 +82,13 @@ def run_laptops():
 # ======================================================================
 # CONFIGURACIÓN – TURISMO
 # ======================================================================
-def run_tourism():
+def run_tourism(df: pd.DataFrame):
     print("\n" + "#" * 70)
     print("#  DATASET: TURISMO")
     print("#" * 70)
 
     pipeline = AssociationPipeline(
-        csv_path="data/raw/tourism.csv",
+        df=df,
 
         # El EDA del proyecto parsea estas columnas como listas
         transaction_columns=["Interests", "Sites Visited"],
@@ -136,7 +137,7 @@ def run_tourism():
 # CONFIGURACIÓN GENÉRICA – Cualquier CSV nuevo
 # ======================================================================
 def run_custom(
-    csv_path: str,
+    df: pd.DataFrame,
     transaction_columns: list[str],
     columns_to_keep: list[str] | None = None,
     min_support: float = 0.3,
@@ -174,7 +175,7 @@ def run_custom(
         Separador dentro de las celdas.
     """
     pipeline = AssociationPipeline(
-        csv_path=csv_path,
+        df=df,
         transaction_columns=transaction_columns,
         columns_to_keep=columns_to_keep,
         min_support=min_support,

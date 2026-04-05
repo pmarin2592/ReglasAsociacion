@@ -6,7 +6,7 @@ desde la carga del CSV hasta las reglas de asociación y recomendaciones.
 
 Uso básico
 ----------
->>> from src.pipeline import AssociationPipeline
+>>> from src.processed.AssociationPipeline import AssociationPipeline
 >>>
 >>> pipeline = AssociationPipeline(
 ...     csv_path="data/raw/mi_dataset.csv",
@@ -19,6 +19,7 @@ Uso básico
 import os
 import json
 import pandas as pd
+from narwhals import DataFrame
 
 from src.data.DataLoader import DataLoader
 from src.data.EDA import EDA
@@ -69,7 +70,7 @@ class AssociationPipeline:
 
     def __init__(
         self,
-        csv_path: str,
+        df: pd.DataFrame,
         transaction_columns: list[str] | None = None,
         columns_to_keep: list[str] | None = None,
         combined_columns: list[str] | None = None,
@@ -85,7 +86,7 @@ class AssociationPipeline:
         separator: str = ",",
         project_root_name: str = "ReglasAsociacion",
     ):
-        self.csv_path = csv_path
+        self.df = df
         self.transaction_columns = transaction_columns or []
         self.columns_to_keep = columns_to_keep
         self.combined_columns = combined_columns
@@ -114,10 +115,7 @@ class AssociationPipeline:
     def _step_load(self) -> pd.DataFrame:
         print("\n" + "▶" * 3 + " PASO 1: CARGA Y LIMPIEZA " + "◀" * 3)
         loader = DataLoader(
-            filepath=self.csv_path,
-            delimiter=self.delimiter,
-            decimal=self.decimal,
-            encoding=self.encoding,
+            df=self.df.copy(),
             project_root_name=self.project_root_name,
         )
         loader.load().clean(columns_to_keep=self.columns_to_keep)
