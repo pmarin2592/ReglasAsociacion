@@ -53,21 +53,6 @@ class Pipeline:
 
         results = pipeline.run()
 
-        # Ejemplo de recomendación interactiva
-        print("\n--- EJEMPLO DE RECOMENDACIÓN (Laptops) ---")
-        try:
-            recs = pipeline.get_recommendations(
-                column="Sales Package",
-                items=["Laptop Bag"],
-                algorithm="apriori",
-                top_n=5,
-            )
-            print("Dado que el cliente lleva: ['Laptop Bag']")
-            print("Se recomienda también:")
-            print(recs.to_string(index=False))
-        except Exception as e:
-            print(f"  (Sin recomendaciones disponibles: {e})")
-
         return results
 
     # ======================================================================
@@ -105,21 +90,6 @@ class Pipeline:
         )
 
         results = pipeline.run()
-
-        # Ejemplo de recomendación interactiva
-        print("\n--- EJEMPLO DE RECOMENDACIÓN (Turismo) ---")
-        try:
-            recs = pipeline.get_recommendations(
-                column="Interests",
-                items=["Adventure"],
-                algorithm="eclat",
-                top_n=5,
-            )
-            print("Dado que el turista tiene interés en: ['Adventure']")
-            print("Se recomienda también:")
-            print(recs.to_string(index=False))
-        except Exception as e:
-            print(f"  (Sin recomendaciones disponibles: {e})")
 
         return results
 

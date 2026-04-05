@@ -299,7 +299,13 @@ class CargaDatos:
                             time.sleep(0.02)
                             progreso.progress(i, text=f"Analizando... {i}%")
                         pp = Pipeline(df=df,min_support= st.session_state["soporte_min"],min_confidence=st.session_state["confianza_min"])
-                        pp.execute("laptops")
+                        print(st.session_state.file_name)
+                        if "laptops" in st.session_state.file_name:
+                            pp.execute("laptops")
+                        elif "tourism" in st.session_state.file_name:
+                            pp.execute("tourism")
+
+
                         st.success("✅ Análisis completado.")
                         self.analisis_realizado            = True
                         st.session_state.analisis_generado = True
