@@ -298,16 +298,26 @@ class CargaDatos:
                         for i in range(1, 101):
                             time.sleep(0.02)
                             progreso.progress(i, text=f"Analizando... {i}%")
-                        pp = Pipeline(df=df,min_support= st.session_state["soporte_min"],min_confidence=st.session_state["confianza_min"])
-                        print(st.session_state.file_name)
-                        if "laptops" in st.session_state.file_name:
-                            pp.execute("laptops")
-                        elif "tourism" in st.session_state.file_name:
-                            pp.execute("tourism")
 
+                        pp = Pipeline(
+                            df=df,
+                            min_support=st.session_state["soporte_min"],
+                            min_confidence=st.session_state["confianza_min"],
+                        )
+
+                        dataset_key = None
+                        if "laptops" in st.session_state.file_name:
+                            dataset_key = "laptops"
+                        elif "tourism" in st.session_state.file_name:
+                            dataset_key = "tourism"
+
+                        if dataset_key:
+                            results, output_dir = pp.execute(dataset_key)
+                            st.session_state["pipeline_results"] = results  # {col: {algo: Recommender}}
+                            st.session_state["pipeline_output_dir"] = output_dir
 
                         st.success("✅ Análisis completado.")
-                        self.analisis_realizado            = True
+                        self.analisis_realizado = True
                         st.session_state.analisis_generado = True
                         st.rerun()
             else:
