@@ -1,0 +1,21 @@
+antecedents,consequents,support,confidence,lift
+Taj Mahal,Machu Picchu,0.1326,0.3295,0.8581
+Machu Picchu,Taj Mahal,0.1326,0.3453,0.8581
+Colosseum,Eiffel Tower,0.1392,0.349,0.8423
+Eiffel Tower,Colosseum,0.1392,0.3359,0.8423
+Machu Picchu,Colosseum,0.1288,0.3354,0.8411
+Colosseum,Machu Picchu,0.1288,0.323,0.8411
+Machu Picchu,Eiffel Tower,0.1334,0.3474,0.8383
+Eiffel Tower,Machu Picchu,0.1334,0.3219,0.8383
+Colosseum,Great Wall of China,0.1324,0.332,0.8337
+Great Wall of China,Colosseum,0.1324,0.3325,0.8337
+Eiffel Tower,Taj Mahal,0.1384,0.334,0.83
+Taj Mahal,Eiffel Tower,0.1384,0.3439,0.83
+Great Wall of China,Taj Mahal,0.1328,0.3335,0.8288
+Taj Mahal,Great Wall of China,0.1328,0.33,0.8288
+Great Wall of China,Machu Picchu,0.125,0.3139,0.8175
+Machu Picchu,Great Wall of China,0.125,0.3255,0.8175
+Taj Mahal,Colosseum,0.13,0.3231,0.8101
+Colosseum,Taj Mahal,0.13,0.326,0.8101
+Eiffel Tower,Great Wall of China,0.1336,0.3224,0.8096
+Great Wall of China,Eiffel Tower,0.1336,0.3355,0.8096
