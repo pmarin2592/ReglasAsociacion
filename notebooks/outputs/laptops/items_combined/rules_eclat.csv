@@ -1,0 +1,76 @@
+antecedents,consequents,support,confidence,lift
+Core i5,Intel,0.3072,1.0,1.4027
+"DDR4, Thin and Light Laptop",8 GB,0.3157,0.7078,1.2374
+8 GB,"DDR4, Thin and Light Laptop",0.3157,0.5519,1.2374
+Thin and Light Laptop,"Intel, Processing & Multitasking",0.3475,0.6763,1.1844
+"Intel, Processing & Multitasking",Thin and Light Laptop,0.3475,0.6085,1.1844
+Processing & Multitasking,Thin and Light Laptop,0.4661,0.5922,1.1526
+Thin and Light Laptop,Processing & Multitasking,0.4661,0.9072,1.1526
+Thin and Light Laptop,"DDR4, Processing & Multitasking",0.3983,0.7753,1.1489
+"DDR4, Processing & Multitasking",Thin and Light Laptop,0.3983,0.5903,1.1489
+"Intel, Thin and Light Laptop",Processing & Multitasking,0.3475,0.9011,1.1449
+8 GB,Thin and Light Laptop,0.3337,0.5833,1.1354
+Thin and Light Laptop,8 GB,0.3337,0.6495,1.1354
+Processing & Multitasking,"DDR4, Thin and Light Laptop",0.3983,0.5061,1.1347
+"DDR4, Thin and Light Laptop",Processing & Multitasking,0.3983,0.8931,1.1347
+"8 GB, DDR4",Thin and Light Laptop,0.3157,0.582,1.1329
+Thin and Light Laptop,"8 GB, DDR4",0.3157,0.6144,1.1329
+8 GB,"DDR4, Intel, Processing & Multitasking",0.3061,0.5352,1.1055
+"DDR4, Intel, Processing & Multitasking",8 GB,0.3061,0.6324,1.1055
+Windows 10 Home,"DDR4, Processing & Multitasking",0.3369,0.7447,1.1037
+"DDR4, Intel",8 GB,0.3877,0.631,1.1031
+8 GB,"DDR4, Intel",0.3877,0.6778,1.1031
+"DDR4, Processing & Multitasking",8 GB,0.4248,0.6295,1.1005
+8 GB,"DDR4, Processing & Multitasking",0.4248,0.7426,1.1005
+"8 GB, Processing & Multitasking","DDR4, Intel",0.3061,0.6752,1.099
+"8 GB, Intel","DDR4, Processing & Multitasking",0.3061,0.741,1.0982
+DDR4,8 GB,0.5424,0.6221,1.0875
+8 GB,DDR4,0.5424,0.9481,1.0875
+"8 GB, Thin and Light Laptop",DDR4,0.3157,0.946,1.0851
+"8 GB, Intel",DDR4,0.3877,0.9385,1.0764
+"8 GB, Processing & Multitasking",DDR4,0.4248,0.9369,1.0747
+"8 GB, Intel, Processing & Multitasking",DDR4,0.3061,0.9263,1.0625
+Windows 10 Home,Processing & Multitasking,0.375,0.829,1.0533
+Intel,Thin and Light Laptop,0.3856,0.5409,1.0527
+Thin and Light Laptop,Intel,0.3856,0.7505,1.0527
+Windows 10 Home,DDR4,0.4142,0.9157,1.0503
+"Processing & Multitasking, Thin and Light Laptop",Intel,0.3475,0.7455,1.0456
+Thin and Light Laptop,"DDR4, Intel",0.3294,0.6412,1.0437
+"DDR4, Intel",Thin and Light Laptop,0.3294,0.5362,1.0437
+"DDR4, Thin and Light Laptop",Intel,0.3294,0.7387,1.0362
+"DDR4, Windows 10 Home",Processing & Multitasking,0.3369,0.8133,1.0333
+"Processing & Multitasking, Windows 10 Home",DDR4,0.3369,0.8983,1.0304
+"8 GB, Processing & Multitasking",Intel,0.3305,0.729,1.0225
+Intel,Processing & Multitasking,0.571,0.8009,1.0176
+Processing & Multitasking,Intel,0.571,0.7254,1.0176
+"8 GB, Intel",Processing & Multitasking,0.3305,0.8,1.0164
+8 GB,Intel,0.4131,0.7222,1.013
+Intel,8 GB,0.4131,0.5795,1.013
+8 GB,"Intel, Processing & Multitasking",0.3305,0.5778,1.0119
+"Intel, Processing & Multitasking",8 GB,0.3305,0.5788,1.0119
+"8 GB, DDR4, Processing & Multitasking",Intel,0.3061,0.7207,1.0109
+Processing & Multitasking,8 GB,0.4534,0.576,1.007
+8 GB,Processing & Multitasking,0.4534,0.7926,1.007
+"DDR4, Processing & Multitasking",Intel,0.4841,0.7174,1.0063
+Intel,"DDR4, Processing & Multitasking",0.4841,0.679,1.0063
+"8 GB, DDR4, Intel",Processing & Multitasking,0.3061,0.7896,1.0032
+Intel,"8 GB, DDR4",0.3877,0.5438,1.0027
+"8 GB, DDR4",Intel,0.3877,0.7148,1.0027
+"DDR4, Intel",Processing & Multitasking,0.4841,0.7879,1.0011
+Processing & Multitasking,"DDR4, Intel",0.4841,0.6151,1.0011
+Thin and Light Laptop,DDR4,0.446,0.868,0.9957
+DDR4,Thin and Light Laptop,0.446,0.5115,0.9957
+"8 GB, DDR4",Processing & Multitasking,0.4248,0.7832,0.9951
+Processing & Multitasking,"8 GB, DDR4",0.4248,0.5397,0.9951
+"8 GB, DDR4","Intel, Processing & Multitasking",0.3061,0.5645,0.9886
+"Intel, Processing & Multitasking","8 GB, DDR4",0.3061,0.5362,0.9886
+Intel,DDR4,0.6144,0.8618,0.9885
+DDR4,Intel,0.6144,0.7047,0.9885
+Processing & Multitasking,DDR4,0.6748,0.8573,0.9834
+DDR4,Processing & Multitasking,0.6748,0.774,0.9834
+"Processing & Multitasking, Thin and Light Laptop",DDR4,0.3983,0.8545,0.9802
+"Intel, Thin and Light Laptop",DDR4,0.3294,0.8544,0.98
+"Intel, Processing & Multitasking",DDR4,0.4841,0.8479,0.9725
+DDR4,"Intel, Processing & Multitasking",0.4841,0.5553,0.9725
+Windows 10 Home,Intel,0.3114,0.6885,0.9658
+Windows 11 Home,DDR4,0.3199,0.8229,0.9439

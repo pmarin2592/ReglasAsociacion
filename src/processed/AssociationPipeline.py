@@ -193,7 +193,7 @@ class AssociationPipeline:
                 apriori_model.plot_network()
 
                 rec_a = Recommender(apriori_model.get_rules(), "Apriori")
-                rec_a.print_report()
+                #rec_a.print_report()
                 self.results[col]["apriori"] = rec_a
 
             # --- ECLAT ---
@@ -211,7 +211,7 @@ class AssociationPipeline:
                 eclat_model.plot_network()
 
                 rec_e = Recommender(eclat_model.get_rules(), "ECLAT")
-                rec_e.print_report()
+                #rec_e.print_report()
                 self.results[col]["eclat"] = rec_e
 
     # ------------------------------------------------------------------
