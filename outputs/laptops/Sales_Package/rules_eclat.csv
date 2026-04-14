@@ -1,143 +1,51 @@
 antecedents,consequents,support,confidence,lift
-Cables and User Manuals,"Adapter, Battery, Laptop",0.0816,1.0,11.1059
-"Adapter, Battery, Laptop",Cables and User Manuals,0.0816,0.9059,11.1059
-"Adapter, Battery","Cables and User Manuals, Laptop",0.0816,0.8851,10.8506
-"Cables and User Manuals, Laptop","Adapter, Battery",0.0816,1.0,10.8506
-Cables and User Manuals,"Adapter, Battery",0.0816,1.0,10.8506
-"Adapter, Battery",Cables and User Manuals,0.0816,0.8851,10.8506
-"Battery, Cables and User Manuals","Adapter, Laptop",0.0816,1.0,9.5354
-"Adapter, Laptop","Battery, Cables and User Manuals",0.0816,0.7778,9.5354
-"Adapter, Laptop",Cables and User Manuals,0.0816,0.7778,9.5354
-Cables and User Manuals,"Adapter, Laptop",0.0816,1.0,9.5354
-Adapter,"Battery, Cables and User Manuals, Laptop",0.0816,0.7624,9.3465
-"Battery, Cables and User Manuals, Laptop",Adapter,0.0816,1.0,9.3465
-"Cables and User Manuals, Laptop",Adapter,0.0816,1.0,9.3465
-Adapter,"Cables and User Manuals, Laptop",0.0816,0.7624,9.3465
-Adapter,Cables and User Manuals,0.0816,0.7624,9.3465
-Cables and User Manuals,Adapter,0.0816,1.0,9.3465
-Adapter,"Battery, Cables and User Manuals",0.0816,0.7624,9.3465
-"Battery, Cables and User Manuals",Adapter,0.0816,1.0,9.3465
-cables and user manuals,"Laptop, adapter",0.1324,1.0,7.552
-"Laptop, adapter",cables and user manuals,0.1324,1.0,7.552
-adapter,"battery, cables and user manuals",0.1324,1.0,7.552
-cables and user manuals,"adapter, battery",0.1324,1.0,7.552
-"Laptop, adapter","battery, cables and user manuals",0.1324,1.0,7.552
-"adapter, battery","Laptop, cables and user manuals",0.1324,1.0,7.552
-adapter,"Laptop, battery, cables and user manuals",0.1324,1.0,7.552
-cables and user manuals,"Laptop, adapter, battery",0.1324,1.0,7.552
-"battery, cables and user manuals",adapter,0.1324,1.0,7.552
-"adapter, battery",cables and user manuals,0.1324,1.0,7.552
-"Laptop, battery, cables and user manuals",adapter,0.1324,1.0,7.552
-"Laptop, adapter, battery",cables and user manuals,0.1324,1.0,7.552
-adapter,cables and user manuals,0.1324,1.0,7.552
-cables and user manuals,adapter,0.1324,1.0,7.552
-"Laptop, cables and user manuals","adapter, battery",0.1324,1.0,7.552
-"battery, cables and user manuals","Laptop, adapter",0.1324,1.0,7.552
-adapter,"Laptop, cables and user manuals",0.1324,1.0,7.552
-"Laptop, cables and user manuals",adapter,0.1324,1.0,7.552
-battery,"adapter, cables and user manuals",0.1324,0.8389,6.3356
-"adapter, cables and user manuals",battery,0.1324,1.0,6.3356
-battery,"Laptop, adapter, cables and user manuals",0.1324,0.8389,6.3356
-"Laptop, battery",adapter,0.1324,0.8389,6.3356
-battery,cables and user manuals,0.1324,0.8389,6.3356
-cables and user manuals,battery,0.1324,1.0,6.3356
-adapter,"Laptop, battery",0.1324,1.0,6.3356
-battery,"Laptop, adapter",0.1324,0.8389,6.3356
-battery,adapter,0.1324,0.8389,6.3356
-adapter,battery,0.1324,1.0,6.3356
-cables and user manuals,"Laptop, battery",0.1324,1.0,6.3356
-"Laptop, battery","adapter, cables and user manuals",0.1324,0.8389,6.3356
-"adapter, cables and user manuals","Laptop, battery",0.1324,1.0,6.3356
-battery,"Laptop, cables and user manuals",0.1324,0.8389,6.3356
-"Laptop, battery",cables and user manuals,0.1324,0.8389,6.3356
-"Laptop, cables and user manuals",battery,0.1324,1.0,6.3356
-"Laptop, adapter",battery,0.1324,1.0,6.3356
-"Laptop, adapter, cables and user manuals",battery,0.1324,1.0,6.3356
-"Adapter, Cables and User Manuals","Battery, Laptop",0.0816,1.0,6.2105
-"Battery, Laptop",Cables and User Manuals,0.0816,0.5066,6.2105
-"Battery, Laptop","Adapter, Cables and User Manuals",0.0816,0.5066,6.2105
-Cables and User Manuals,"Battery, Laptop",0.0816,1.0,6.2105
-"Adapter, Cables and User Manuals",Battery,0.0816,1.0,6.1299
-Battery,"Adapter, Cables and User Manuals",0.0816,0.5,6.1299
-Battery,"Adapter, Cables and User Manuals, Laptop",0.0816,0.5,6.1299
-"Cables and User Manuals, Laptop",Battery,0.0816,1.0,6.1299
-Battery,"Cables and User Manuals, Laptop",0.0816,0.5,6.1299
-"Adapter, Cables and User Manuals, Laptop",Battery,0.0816,1.0,6.1299
-Cables and User Manuals,Battery,0.0816,1.0,6.1299
-Battery,Cables and User Manuals,0.0816,0.5,6.1299
-Adapter,Battery,0.0922,0.8614,5.2802
-Battery,Adapter,0.0922,0.5649,5.2802
-"Adapter, Laptop",Battery,0.09,0.8586,5.263
-Battery,"Adapter, Laptop",0.09,0.5519,5.263
-"Battery, Laptop",Adapter,0.09,0.5592,5.2267
-Adapter,"Battery, Laptop",0.09,0.8416,5.2267
-"Laptop, Warranty Documents","Power Adaptor, User Guide",0.4809,0.919,1.6338
 "Power Adaptor, User Guide","Laptop, Warranty Documents",0.4809,0.855,1.6338
+"Laptop, Warranty Documents","Power Adaptor, User Guide",0.4809,0.919,1.6338
 Power Adaptor,"Laptop, User Guide, Warranty Documents",0.4809,0.8454,1.6156
+"Laptop, Warranty Documents",Power Adaptor,0.4809,0.919,1.6156
 Power Adaptor,"Laptop, Warranty Documents",0.4809,0.8454,1.6156
 "Laptop, User Guide, Warranty Documents",Power Adaptor,0.4809,0.919,1.6156
-"Laptop, Warranty Documents",Power Adaptor,0.4809,0.919,1.6156
-Warranty Documents,"Power Adaptor, User Guide",0.4979,0.9021,1.6038
 "Power Adaptor, User Guide",Warranty Documents,0.4979,0.8851,1.6038
+Warranty Documents,"Power Adaptor, User Guide",0.4979,0.9021,1.6038
 "Laptop, Power Adaptor, User Guide",Warranty Documents,0.4809,0.8816,1.5973
 Warranty Documents,"Laptop, Power Adaptor, User Guide",0.4809,0.8714,1.5973
-Warranty Documents,Power Adaptor,0.4979,0.9021,1.5858
-Power Adaptor,Warranty Documents,0.4979,0.8752,1.5858
-"User Guide, Warranty Documents",Power Adaptor,0.4979,0.9021,1.5858
 Power Adaptor,"User Guide, Warranty Documents",0.4979,0.8752,1.5858
-"User Guide, Warranty Documents","Laptop, Power Adaptor",0.4809,0.8714,1.5789
+"User Guide, Warranty Documents",Power Adaptor,0.4979,0.9021,1.5858
+Power Adaptor,Warranty Documents,0.4979,0.8752,1.5858
+Warranty Documents,Power Adaptor,0.4979,0.9021,1.5858
 Warranty Documents,"Laptop, Power Adaptor",0.4809,0.8714,1.5789
-"Laptop, Power Adaptor","User Guide, Warranty Documents",0.4809,0.8714,1.5789
 "Laptop, Power Adaptor",Warranty Documents,0.4809,0.8714,1.5789
+"Laptop, Power Adaptor","User Guide, Warranty Documents",0.4809,0.8714,1.5789
+"User Guide, Warranty Documents","Laptop, Power Adaptor",0.4809,0.8714,1.5789
 "Laptop, User Guide","Power Adaptor, Warranty Documents",0.4809,0.7814,1.5695
 "Power Adaptor, Warranty Documents","Laptop, User Guide",0.4809,0.966,1.5695
 "Laptop, User Guide",Power Adaptor,0.5456,0.8864,1.5582
 Power Adaptor,"Laptop, User Guide",0.5456,0.959,1.5582
-"Laptop, Power Adaptor, Warranty Documents",User Guide,0.4809,1.0,1.5526
-User Guide,"Laptop, Warranty Documents",0.5233,0.8125,1.5526
 "Laptop, Warranty Documents",User Guide,0.5233,1.0,1.5526
 User Guide,"Power Adaptor, Warranty Documents",0.4979,0.773,1.5526
-Warranty Documents,User Guide,0.5519,1.0,1.5526
-"Power Adaptor, Warranty Documents",User Guide,0.4979,1.0,1.5526
-User Guide,Warranty Documents,0.5519,0.8569,1.5526
+User Guide,"Laptop, Warranty Documents",0.5233,0.8125,1.5526
 User Guide,"Laptop, Power Adaptor, Warranty Documents",0.4809,0.7467,1.5526
-Warranty Documents,"Laptop, User Guide",0.5233,0.9482,1.5406
+User Guide,Warranty Documents,0.5519,0.8569,1.5526
+"Power Adaptor, Warranty Documents",User Guide,0.4979,1.0,1.5526
+Warranty Documents,User Guide,0.5519,1.0,1.5526
+"Laptop, Power Adaptor, Warranty Documents",User Guide,0.4809,1.0,1.5526
 "Laptop, User Guide",Warranty Documents,0.5233,0.8503,1.5406
-Power Adaptor,User Guide,0.5625,0.9888,1.5353
+Warranty Documents,"Laptop, User Guide",0.5233,0.9482,1.5406
 User Guide,Power Adaptor,0.5625,0.8734,1.5353
+Power Adaptor,User Guide,0.5625,0.9888,1.5353
 User Guide,"Laptop, Power Adaptor",0.5456,0.847,1.5348
 "Laptop, Power Adaptor",User Guide,0.5456,0.9885,1.5348
-Power Adapter,"Laptop, User Guide",0.0551,0.8966,1.4567
-"Laptop, Power Adapter",User Guide,0.0551,0.8966,1.392
-Power Adapter,User Guide,0.0551,0.8966,1.392
-Power Adapter,Laptop,0.0614,1.0,1.0643
-Cables and User Manuals,Laptop,0.0816,1.0,1.0643
-"Adapter, Cables and User Manuals",Laptop,0.0816,1.0,1.0643
-"battery, cables and user manuals",Laptop,0.1324,1.0,1.0643
-"Adapter, Battery, Cables and User Manuals",Laptop,0.0816,1.0,1.0643
-battery,Laptop,0.1578,1.0,1.0643
-"adapter, battery, cables and user manuals",Laptop,0.1324,1.0,1.0643
-"Battery, User Guide",Laptop,0.0667,1.0,1.0643
-"Power Adapter, User Guide",Laptop,0.0551,1.0,1.0643
-"Battery, Cables and User Manuals",Laptop,0.0816,1.0,1.0643
-cables and user manuals,Laptop,0.1324,1.0,1.0643
-"adapter, battery",Laptop,0.1324,1.0,1.0643
-adapter,Laptop,0.1324,1.0,1.0643
-"adapter, cables and user manuals",Laptop,0.1324,1.0,1.0643
-Battery,Laptop,0.161,0.987,1.0504
-Adapter,Laptop,0.1049,0.9802,1.0432
-"Adapter, Battery",Laptop,0.09,0.977,1.0398
-Power Adaptor,Laptop,0.5519,0.9702,1.0326
 Laptop,Power Adaptor,0.5519,0.5874,1.0326
+Power Adaptor,Laptop,0.5519,0.9702,1.0326
 Laptop,"Power Adaptor, User Guide",0.5456,0.5806,1.0322
 "Power Adaptor, User Guide",Laptop,0.5456,0.9699,1.0322
 Laptop,"Power Adaptor, User Guide, Warranty Documents",0.4809,0.5118,1.028
+Laptop,"Power Adaptor, Warranty Documents",0.4809,0.5118,1.028
 "Power Adaptor, User Guide, Warranty Documents",Laptop,0.4809,0.966,1.028
 "Power Adaptor, Warranty Documents",Laptop,0.4809,0.966,1.028
-Laptop,"Power Adaptor, Warranty Documents",0.4809,0.5118,1.028
 Laptop,User Guide,0.6155,0.655,1.017
 User Guide,Laptop,0.6155,0.9556,1.017
-"User Guide, Warranty Documents",Laptop,0.5233,0.9482,1.0091
 Laptop,"User Guide, Warranty Documents",0.5233,0.5569,1.0091
-Warranty Documents,Laptop,0.5233,0.9482,1.0091
 Laptop,Warranty Documents,0.5233,0.5569,1.0091
+Warranty Documents,Laptop,0.5233,0.9482,1.0091
+"User Guide, Warranty Documents",Laptop,0.5233,0.9482,1.0091

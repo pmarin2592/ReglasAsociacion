@@ -166,6 +166,89 @@ El pipeline detecta automáticamente el tipo de dataset por nombre de archivo:
 
 ---
 
+## 🔧 Usar con otros datasets
+
+El pipeline es genérico y puede ejecutarse sobre cualquier CSV que tenga columnas con listas de ítems. Desde el notebook `Pipeline_Asociacion.ipynb` o desde un script propio, usa la siguiente función:
+
+```python
+from src.processed.AssociationPipeline import AssociationPipeline
+
+def run_custom(
+    df: pd.DataFrame,
+    transaction_columns: list[str],
+    columns_to_keep: list[str] | None = None,
+    min_support: float = 0.3,
+    min_confidence: float = 0.5,
+    output_dir: str = "outputs/custom",
+    run_apriori: bool = True,
+    run_eclat: bool = True,
+    cat_columns_to_plot: list[str] | None = None,
+    separator: str = ",",
+):
+    """
+    Función genérica para ejecutar el pipeline en cualquier CSV.
+
+    Parámetros
+    ----------
+    df : pd.DataFrame
+        DataFrame ya cargado.
+    transaction_columns : list[str]
+        Columnas con listas de ítems (separadas por `separator`).
+    columns_to_keep : list[str] | None
+        Columnas a conservar. None = todas.
+    min_support : float
+        Soporte mínimo.
+    min_confidence : float
+        Confianza mínima.
+    output_dir : str
+        Directorio de salida.
+    run_apriori : bool
+        ¿Ejecutar Apriori?
+    run_eclat : bool
+        ¿Ejecutar ECLAT?
+    cat_columns_to_plot : list[str] | None
+        Columnas categóricas para el EDA.
+    separator : str
+        Separador dentro de las celdas.
+    """
+    pipeline = AssociationPipeline(
+        df=df,
+        transaction_columns=transaction_columns,
+        columns_to_keep=columns_to_keep,
+        min_support=min_support,
+        min_confidence=min_confidence,
+        output_dir=output_dir,
+        run_apriori=run_apriori,
+        run_eclat=run_eclat,
+        cat_columns_to_plot=cat_columns_to_plot,
+        separator=separator,
+    )
+    return pipeline.run()
+```
+
+**Ejemplo de uso:**
+
+```python
+import pandas as pd
+
+df = pd.read_csv("data/raw/mi_dataset.csv")
+
+results = run_custom(
+    df=df,
+    transaction_columns=["productos"],   # columna con listas separadas por coma
+    columns_to_keep=["cliente_id", "productos", "categoria"],
+    min_support=0.05,
+    min_confidence=0.5,
+    output_dir="outputs/mi_dataset",
+    cat_columns_to_plot=["categoria"],
+    separator=",",
+)
+```
+
+Para integrarlo en la aplicación Streamlit con un nuevo dataset, agrega un método `_run_<nombre>` en `Pipeline.py` siguiendo el mismo patrón que `_run_laptops` y `_run_tourism`, y registra la detección por nombre de archivo en el método `execute`.
+
+---
+
 ## 🏗️ Arquitectura del Pipeline
 
 ```
